@@ -1,0 +1,82 @@
+.header .col-2{
+    text-align: center;
+}
+.header .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .col-2 h4{
+    margin-top: 10px; 
+}
+.header .row img{
+    max-height: 150px;
+    float: right;
+    margin-right: 45px;
+}
+.labs .row{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between; 
+    flex-wrap: nowrap;
+}
+.labs .row div{
+    flex: 1 1 auto;
+    text-align: center;
+}
+.labs summary {
+    background-color: #ffffff;
+    color: black;
+    padding: 8px 30px;
+    border: 2px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 10px 0;
+    text-align: center;
+    transition: background-color 0.5s;
+    display: inline-block;
+}
+.labs summary:hover {
+    background-color: #dfdee0;
+}
+details summary {
+    list-style: none;
+}
+details .info {
+    display: none;
+}
+details[open] .info {
+    display: block;
+}
+
+.labs .btn{
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 8px 30px;
+    margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: backgroung 0.5s;
+}
+.labs .btn:hover{
+    background: #dfdee0;
+}
+.info .btn{
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 8px 30px;
+    margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: backgroung 0.5s;
+}
+.info .btn:hover{
+    background: #dfdee0;
+}
+
+
+
