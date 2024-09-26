@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Звітний документ</title>
 </head>
 <body>
@@ -20,128 +21,35 @@
         </div>
     </div>
 
-    <div class="labs">
-        <div class="row">
-            <details>
-                <summary>Лабораторна<br> робота №1</summary>
-                <div class="info">
-                    <a href="" class="btn">Опис предметного середовища</a>
-                    <a href="" class="btn">Тема, мета, місце розташування лаби №1</a>
-                    <a href="" class="btn">Структура документа</a>
-                    <a href="" class="btn">HTML-код таблиць</a>
-                    <a href="" class="btn">HTML-код форми</a>
-                    <a href="" class="btn">HTML-код зображення</a>
-                    <a href="" class="btn">Висновки</a>
-                </div>
-            </details>
+   <section class="labs">
+        <button onclick="selectLab(1)">Лабораторна робота №1</button>
+        <button onclick="selectLab(2)">Лабораторна робота №2</button>
+        <button onclick="selectLab(3)">Лабораторна робота №3</button>
+        <button onclick="selectLab(4)">Лабораторна робота №4</button>
+        <button onclick="selectLab(5)">Лабораторна робота №5</button>
+        <button onclick="selectLab(6)">Лабораторна робота №6</button>
+        <button onclick="selectLab(7)">Лабораторна робота №7</button>
+        <button onclick="selectLab(8)">Лабораторна робота №8</button>
+        <button onclick="selectLab(9)">Лабораторна робота №9</button>
+   </section>
+
+    <div class="info">
+        <aside class="sidebar">
+            <ul id="sidebar-buttons">
+                <!-- <li><button id="btn1">Опис предметного середовища</button></li>
+                <li><button id="btn2">Тема, мета, місце розташування лабораторної роботи</button></li>
+                <li><button id="btn3">Структура документа</button></li>
+                <li><button id="btn4">HTML код таблиць</button></li>
+                <li><button id="btn5">HTML код форми</button></li>
+                <li><button id="btn6">HTML код зображення</button></li>
+                <li><button id="btn7">Висновки</button></li> -->
+            </ul>
+        </aside>
+        <section class="output">
+            <p>Місце виведення інформації</p>
+        </section>
+    </div>       
     
-            <details>
-                <summary>Лабораторна<br> робота №2</summary>
-                <div class="info">
-                    <a href="" class="btn">Опис предметного середовища</a>
-                    <a href="" class="btn">Тема, мета, місце розташування лаби №2</a>
-                    <a href="" class="btn">Структура документа</a>
-                    <a href="" class="btn">HTML-код таблиць</a>
-                    <a href="" class="btn">HTML-код форми</a>
-                    <a href="" class="btn">HTML-код зображення</a>
-                    <a href="" class="btn">Висновки</a>
-                </div>
-            </details>
-    
-            <details>
-                <summary>Лабораторна<br> робота №3</summary>
-                <div class="info">
-                    <a href="" class="btn">Опис предметного середовища</a>
-                    <a href="" class="btn">Тема, мета, місце розташування лаби №3</a>
-                    <a href="" class="btn">Структура документа</a>
-                    <a href="" class="btn">HTML-код таблиць</a>
-                    <a href="" class="btn">HTML-код форми</a>
-                    <a href="" class="btn">HTML-код зображення</a>
-                    <a href="" class="btn">Висновки</a>
-                </div>
-            </details>
-    
-            <details>
-                <summary>Лабораторна<br> робота №4</summary>
-                <div class="info">
-                    <a href="" class="btn">Опис предметного середовища</a>
-                    <a href="" class="btn">Тема, мета, місце розташування лаби №4</a>
-                    <a href="" class="btn">Структура документа</a>
-                    <a href="" class="btn">HTML-код таблиць</a>
-                    <a href="" class="btn">HTML-код форми</a>
-                    <a href="" class="btn">HTML-код зображення</a>
-                    <a href="" class="btn">Висновки</a>
-                </div>
-            </details> 
-    
-            <details>
-                <summary>Лабораторна<br> робота №5</summary>
-                <div class="info">
-                    <a href="" class="btn">Опис предметного середовища</a>
-                    <a href="" class="btn">Тема, мета, місце розташування лаби №5</a>
-                    <a href="" class="btn">Структура документа</a>
-                    <a href="" class="btn">HTML-код таблиць</a>
-                    <a href="" class="btn">HTML-код форми</a>
-                    <a href="" class="btn">HTML-код зображення</a>
-                    <a href="" class="btn">Висновки</a>
-                </div>
-            </details>
-    
-            <details>
-                <summary>Лабораторна<br> робота №6</summary>
-                <div class="info">
-                    <a href="" class="btn">Опис предметного середовища</a>
-                    <a href="" class="btn">Тема, мета, місце розташування лаби №6</a>
-                    <a href="" class="btn">Структура документа</a>
-                    <a href="" class="btn">HTML-код таблиць</a>
-                    <a href="" class="btn">HTML-код форми</a>
-                    <a href="" class="btn">HTML-код зображення</a>
-                    <a href="" class="btn">Висновки</a>
-                </div>
-            </details>
-    
-            <details>
-                <summary>Лабораторна<br> робота №7</summary>
-                <div class="info">
-                    <a href="" class="btn">Опис предметного середовища</a>
-                    <a href="" class="btn">Тема, мета, місце розташування лаби №7</a>
-                    <a href="" class="btn">Структура документа</a>
-                    <a href="" class="btn">HTML-код таблиць</a>
-                    <a href="" class="btn">HTML-код форми</a>
-                    <a href="" class="btn">HTML-код зображення</a>
-                    <a href="" class="btn">Висновки</a>
-                </div>
-            </details>
-                
-            <details>
-                <summary>Лабораторна<br> робота №8</summary>
-                <div class="info">
-                    <a href="" class="btn">Опис предметного середовища</a>
-                    <a href="" class="btn">Тема, мета, місце розташування лаби №8</a>
-                    <a href="" class="btn">Структура документа</a>
-                    <a href="" class="btn">HTML-код таблиць</a>
-                    <a href="" class="btn">HTML-код форми</a>
-                    <a href="" class="btn">HTML-код зображення</a>
-                    <a href="" class="btn">Висновки</a>
-                </div>
-            </details>
-                
-            <details>
-                <summary>Лабораторна<br> робота №9</summary>
-                <div class="info">
-                    <a href="" class="btn">Опис предметного середовища</a>
-                    <a href="" class="btn">Тема, мета, місце розташування лаби №9</a>
-                    <a href="" class="btn">Структура документа</a>
-                    <a href="" class="btn">HTML-код таблиць</a>
-                    <a href="" class="btn">HTML-код форми</a>
-                    <a href="" class="btn">HTML-код зображення</a>
-                    <a href="" class="btn">Висновки</a>
-                </div>
-            </details>
-    
-        </div>
-        
-    </div>
+    <footer></footer>
 </body>
 </html>
-

@@ -13,57 +13,21 @@
     max-height: 150px;
     float: right;
     margin-right: 45px;
+    border-radius: 20px;
 }
-.labs .row{
+.labs {
     display: flex;
     gap: 10px;
     justify-content: space-between; 
     flex-wrap: nowrap;
+    margin: 20px;
 }
 .labs .row div{
     flex: 1 1 auto;
     text-align: center;
 }
-.labs summary {
-    background-color: #ffffff;
-    color: black;
-    padding: 8px 30px;
-    border: 2px solid black;
-    border-radius: 15px;
-    cursor: pointer;
-    margin: 10px 0;
-    text-align: center;
-    transition: background-color 0.5s;
-    display: inline-block;
-}
-.labs summary:hover {
-    background-color: #dfdee0;
-}
-details summary {
-    list-style: none;
-}
-details .info {
-    display: none;
-}
-details[open] .info {
-    display: block;
-}
 
-.labs .btn{
-    display: inline-block;
-    background: #ffffff;
-    color: black;
-    padding: 8px 30px;
-    margin: 10px 0;
-    border: 2px solid black;
-    border-radius: 15px;
-    text-decoration: none;
-    transition: backgroung 0.5s;
-}
-.labs .btn:hover{
-    background: #dfdee0;
-}
-.info .btn{
+.labs button{
     display: inline-block;
     background: #ffffff;
     color: black;
@@ -74,9 +38,41 @@ details[open] .info {
     text-decoration: none;
     transition: backgroung 0.5s;
 }
-.info .btn:hover{
+.labs button:hover{
     background: #dfdee0;
 }
+.info button{
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 8px 30px;
+    margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: backgroung 0.5s;
+}
+.info ul{
+    list-style-type: none;
+}
+.info button:hover{
+    background: #dfdee0;
+}
+.info {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 10px;
+}
+
+.output {
+    width: 80%;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+}
+
 
 
 
