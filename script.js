@@ -10,7 +10,7 @@ function selectLab(labNumber) {
     sidebarButtons(labNumber);
 }
 
-function sidebarButtons(labNumber){
+function sidebarButtons(labNumber) {
     const sidebar = document.getElementById('sidebar-buttons');
     sidebar.innerHTML = '';
 
@@ -66,6 +66,17 @@ function sidebarButtons(labNumber){
                 <li><button id="btn5">ВИСНОВКИ</button></li>
             `;
              break;
+        case 5:
+            buttonsHTML = `
+                <li><button id="btn1">Тема, мета ЛР№5. Місце розташування сайту, звіту</button></li>
+                <li><button id="btn2">ЗАВДАННЯ №1</button></li>
+                <li><button id="btn3">ЗАВДАННЯ №2</button></li>
+                <li><button id="btn4">ЗАВДАННЯ №3</button></li>
+                <li><button id="btn5">ЗАВДАННЯ №4</button></li>
+                <li><button id="btn6">ЗАВДАННЯ №5</button></li>
+                <li><button id="btn7">ВИСНОВКИ</button></li>
+            `;
+            break;
         default:
             buttonsHTML = '<li><p>Немає інформації для цієї лабораторної роботи</p></li>';
     }
@@ -346,6 +357,39 @@ function loadLab4Content(buttonId) {
             Планшетна версія: Для екранів шириною від 768px до 1024px змінюється компонування контенту, зменшуючи розміри зображень та текстових блоків. Сітка переходить з 3 колонок на 2, що робить сторінку більш зручною для перегляду.<br>
 
             Мобільна версія: У версії для екранів шириною до 768px застосовано стратегію Mobile First. Сторінка переходить на одноколонну сітку, елементи розміщуються один під одним, меню стає вертикальним. Шрифти та кнопки зменшуються, що забезпечує комфортне використання на невеликих екранах.</p>`;
+            break;
+        default:
+            content = '<p>Виберіть тему для відображення інформації.</p>';
+    }
+
+    return content;
+}
+
+function loadLab5Content(buttonId) {
+    let content = '';
+
+    switch (buttonId) {
+        case 'btn1':
+            content = `<p>Тема:  ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ ЗАСОВАМИ МОВИ JAVASCRIPT
+            <br> Мета: придбати практичні навички роботи з конструкціями мови JS, масивами та фугкціями у js-сценаріях.  Реалізація програм засовами мови JAVASCRIPT <br> Посилання на репозиторій власного WEB-застосунку: https://github.com/hannoveran/Laba5.git <br> Посилання на живу сторінку власного WEB-застосунку: https://hannoveran.github.io/Laba5/ <br> Посилання на репозиторій звітного HTML-документу: https://github.com/hannoveran/ReportDoc.git <br> Посилання на живу сторінку звітного HTML-документу: https://hannoveran.github.io/ReportDoc/</p>`;
+            break;
+        case 'btn2':
+            content = `<p> <img src="images/L5/task1_code.png"> <br> <img src="images/L5/task1.png"> </p>`;
+            break;
+        case 'btn3':
+            content = `<p> <img src="images/L5/task2_code.png"> <br> <img src="images/L5/task2.png"> </p>`;
+            break;
+        case 'btn4':
+            content = `<p> <img src="images/L5/task3_code.png"> <br> <img src="images/L5/task3.png"> </p>`;
+            break;
+        case 'btn5':
+            content = `<p> <img src="images/L5/task4.1_code.png"> <br> <img src="images/L5/task4.2_code.png"> <br> <img src="images/L5/task4.png"> </p>`;
+            break;
+        case 'btn6':
+            content = `<p> <img src="images/L5/task5.1_code.png"> <br> <img src="images/L5/task5.2_code.png"> <br><img src="images/L5/task5.3_code.png"> <br> <img src="images/L5/task5.png"> </p>`;
+            break;
+        case 'btn7':
+            content = `<p> Висновки: <br> У цій лабораторній роботі було досліджено функціональне застосування JavaScript у HTML-документі, зокрема роботу з масивами та взаємодію з елементами сторінки. Під час виконання завдань реалізовано обробку масивів (сортування, об'єднання, пошук), а також створення інтерактивного текстового редактора з можливістю форматування. </p>`;
             break;
         default:
             content = '<p>Виберіть тему для відображення інформації.</p>';
