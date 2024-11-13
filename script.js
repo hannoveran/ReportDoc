@@ -77,6 +77,18 @@ function sidebarButtons(labNumber) {
                 <li><button id="btn7">ВИСНОВКИ</button></li>
             `;
             break;
+        case 6:
+            buttonsHTML = `
+                <li><button id="btn1">Тема, мета ЛР№6. Місце розташування сайту, звіту</button></li>
+                <li><button id="btn2">ЗАВДАННЯ №2</button></li>
+                <li><button id="btn3">ЗАВДАННЯ №4</button></li>
+                <li><button id="btn4">ЗАВДАННЯ №6</button></li>
+                <li><button id="btn5">ЗАВДАННЯ №8</button></li>
+                <li><button id="btn6">ЗАВДАННЯ №9</button></li>
+                <li><button id="btn7">ЗАВДАННЯ №10</button></li>
+                <li><button id="btn8">ВИСНОВКИ</button></li>
+            `;
+            break;
         default:
             buttonsHTML = '<li><p>Немає інформації для цієї лабораторної роботи</p></li>';
     }
@@ -386,10 +398,48 @@ function loadLab5Content(buttonId) {
             content = `<p> <img src="images/L5/task4.1_code.png"> <br> <img src="images/L5/task4.2_code.png"> <br> <img src="images/L5/task4.png"> </p>`;
             break;
         case 'btn6':
-            content = `<p> <img src="images/L5/task5.1_code.png"> <br> <img src="images/L5/task5.2_code.png"> <br><img src="images/L5/task5.3_code.png"> <br> <img src="images/L5/task5.png"> </p>`;
+            content = `<p> <img src="images/L5/task5.1_code.png"> <br> <img src="images/L5/task5.2_code.png" width=700px> <br><img src="images/L5/task5.3_code.png"> <br> <img src="images/L5/task5.png"> </p>`;
             break;
         case 'btn7':
             content = `<p> Висновки: <br> У цій лабораторній роботі було досліджено функціональне застосування JavaScript у HTML-документі, зокрема роботу з масивами та взаємодію з елементами сторінки. Під час виконання завдань реалізовано обробку масивів (сортування, об'єднання, пошук), а також створення інтерактивного текстового редактора з можливістю форматування. </p>`;
+            break;
+        default:
+            content = '<p>Виберіть тему для відображення інформації.</p>';
+    }
+
+    return content;
+}
+
+function loadLab6Content(buttonId) {
+    let content = '';
+
+    switch (buttonId) {
+        case 'btn1':
+            content = `<p>Тема:  ОБ'ЄКТ. МЕТОДИ ОБ'ЄКТА. МАСИВ ОБ'ЄКТІВ. ДЕСТРУКТУРИЗАЦІЯ ОБ'ЄКТІВ. CALLBACK. СТРІЛОЧНІ ФУНКЦІЇ. СТРІЛОЧНІ ФУНКЦІЇ ЯК КОЛБЕКИ.
+            <br> Мета: придбати практичні навички роботи з об'єктами. Методи об'єкта.. Callback. Стрілочні функції. Стрілочні функції як колбеки.
+            Реалізація програм засовами мови JAVASCRIPT
+            <br> Посилання на репозиторій власного WEB-застосунку: https://github.com/hannoveran/Laba5.git <br> Посилання на живу сторінку власного WEB-застосунку: https://hannoveran.github.io/Laba5/ <br> Посилання на репозиторій звітного HTML-документу: https://github.com/hannoveran/ReportDoc.git <br> Посилання на живу сторінку звітного HTML-документу: https://hannoveran.github.io/ReportDoc/</p>`;
+            break;
+        case 'btn2':
+            content = `<p> <img src="images/L6/task2_code.png"> <br> <img src="images/L6/task2.png"> </p>`;
+            break;
+        case 'btn3':
+            content = `<p> <img src="images/L6/task4_code.png"> <br> <img src="images/L6/task4.png"> </p>`;
+            break;
+        case 'btn4':
+            content = `<p> <img src="images/L6/task6_code.png"> <br> <img src="images/L6/task6.png"> </p>`;
+            break;
+        case 'btn5':
+            content = `<p> <img src="images/L6/task8_code.png"> <br> <img src="images/L6/task8.png"> </p>`;
+            break;
+        case 'btn6':
+            content = `<p> <img src="images/L6/task9_code.png"> <br> <img src="images/L6/task9.png"> </p>`;
+            break;
+        case 'btn7':
+            content = `<p> <img src="images/L6/task10_code.png"> <br> <img src="images/L6/task10.png"> </p>`;
+            break;
+        case 'btn8':
+            content = `<p> Висновки: <br> У цій лабораторній роботі було набуте практичне розуміння роботи з об'єктами та їх методами в JavaScript, а також навички маніпуляцій з масивами об'єктів. Особливу увагу було приділено деструктуризації об'єктів та використанню колбек-функцій, зокрема стрілочних функцій. Вивчено, як застосовувати стрілочні функції як колбеки для обробки даних у масивах та об'єктах. Завдання допомогли закріпити основи роботи з об'єктами, методами об'єктів, колбеками та стрілочними функціями, що є важливими аспектами у програмуванні на JavaScript. </p>`;
             break;
         default:
             content = '<p>Виберіть тему для відображення інформації.</p>';
