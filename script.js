@@ -4,7 +4,7 @@ let selectedLab = null;
 //Вибір лабораторної роботи
 function selectLab(labNumber) {
     selectedLab = labNumber;
-    console.log(`Лабораторна робота №${labNumber} обрана.`);
+    //console.log(`Лабораторна робота №${labNumber} обрана.`);
     document.querySelector('.output').innerHTML = `<p>Лабораторна робота №${labNumber} обрана.</p>`;
 
     sidebarButtons(labNumber);
@@ -89,6 +89,19 @@ function sidebarButtons(labNumber) {
                 <li><button id="btn8">ВИСНОВКИ</button></li>
             `;
             break;
+        case 7:
+            buttonsHTML = `
+                <li><button id="btn1">Тема, мета ЛР№7. Місце розташування звіту</button></li>
+                <li><button id="btn2">ЗАВДАННЯ №2</button></li>
+                <li><button id="btn3">ЗАВДАННЯ №4</button></li>
+                <li><button id="btn4">ЗАВДАННЯ №6</button></li>
+                <li><button id="btn5">ЗАВДАННЯ №7</button></li>
+                <li><button id="btn6">ЗАВДАННЯ №8</button></li>
+                <li><button id="btn7">ЗАВДАННЯ №9</button></li>
+                <li><button id="btn8">ЗАВДАННЯ №10</button></li>
+                <li><button id="btn9">ВИСНОВКИ</button></li>
+            `;
+            break;
         default:
             buttonsHTML = '<li><p>Немає інформації для цієї лабораторної роботи</p></li>';
     }
@@ -97,7 +110,7 @@ function sidebarButtons(labNumber) {
 
     document.querySelectorAll('aside button').forEach(button => {
         button.addEventListener('click', (event) => {
-            console.log(`Кнопка з ідентифікатором ${event.target.id} була натиснута.`);
+            //console.log(`Кнопка з ідентифікатором ${event.target.id} була натиснута.`);
             content_load(event.target.id);
         });
     });
@@ -105,7 +118,7 @@ function sidebarButtons(labNumber) {
 
 //Завантаження вмісту
 function content_load(buttonId) {
-    console.log(`Натиснута кнопка: ${buttonId}`);
+    //console.log(`Натиснута кнопка: ${buttonId}`);
 
     if (selectedLab === null) {
         document.querySelector('.output').innerHTML = `<p>Спочатку виберіть лабораторну роботу!</p>`;
@@ -447,10 +460,204 @@ function loadLab6Content(buttonId) {
 
     return content;
 }
-// document.querySelectorAll('aside button').forEach(button => {
-//     button.addEventListener('click', (event) => {
-//         console.log(`Кнопка з ідентифікатором ${event.target.id} була натиснута.`);
-//         content_load(event.target.id);
-//     });
-// });
+
+function loadLab7Content(buttonId) {
+    let content = '';
+
+    switch (buttonId) {
+        case 'btn1':
+            content = `<p>Тема:  КЛАСИ. ОБ'ЄКТНА МОДЕЛЬ ДОКУМЕНТА (DOM). ПОДІЇ. ОБ'ЄКТ ПОДІЇ. ДЕЛЕГУВАННЯ ПОДІЙ. 
+            <br> Мета: придбати практичні навички роботи з об'єктами. Методи об'єкта.. Callback. Стрілочні функції. Стрілочні функції як колбеки.
+            Реалізація програм засовами мови JAVASCRIPT
+
+            <br> Посилання на репозиторій звітного HTML-документу: https://github.com/hannoveran/ReportDoc.git <br> Посилання на живу сторінку звітного HTML-документу: https://hannoveran.github.io/ReportDoc/</p>`;
+            break;
+        case 'btn2':
+            content = `<div>
+                <p>Завдання №2: </p>
+                <input type="text" id="input1" placeholder="Перше поле">
+                <input type="text" id="input2" placeholder="Друге поле">
+                <button onclick="swapValues()">SWAP</button>
+            </div>
+            <br> <img src="images/L7/lab7_task2.png">`;
+            break;
+        case 'btn3':
+            content = `<div>
+                <p>Завдання №4: </p>
+                <div id="resizableBox" style="width: 100px; height: 100px; background: lightblue;"></div>
+                <button onclick="increaseSize()">Збільшити</button>
+                <button onclick="decreaseSize()">Зменшити</button>
+            </div>
+            <br> <img src="images/L7/lab7_task4.png">`;
+            break;
+        case 'btn4':
+            content = `<p>Завдання №6: </p>
+                <ul id="numbersList">
+                    <li>1</li>
+                    <li>4</li>
+                    <li>8</li>
+                    <li>16</li>
+                    <li>20</li>
+                    <li>30</li>
+                </ul>
+                <button onclick="doubleValues()">Подвоїти</button>
+                <br> <img src="images/L7/lab7_task6.png">`;
+            break;
+        case 'btn5':
+            content = `<p>Завдання №7: </p>
+                <ul id="categories">
+                    <li class="item">
+                        <h2>Animals</h2>
+                        <ul>
+                        <li>Cat</li>
+                        <li>Hamster</li>
+                        <li>Horse</li>
+                        <li>Parrot</li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <h2>Products</h2>
+                        <ul>
+                        <li>Bread</li>
+                        <li>Prasley</li>
+                        <li>Cheese</li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <h2>Technologies</h2>
+                        <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                        </ul>
+                    </li>
+                </ul>
+                <button onclick="showInformation()">Вивести інформацію</button>
+                <br> <img src="images/L7/lab7_task7.png">`;
+            break;
+        case 'btn6':
+            content = `
+                <p>Завдання №8: </p>
+                <form class="login-form">
+                    <label>
+                        Email
+                        <input type="email" name="email" />
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" name="password" />
+                    </label>
+                    <button type="submit">Log in</button>
+                </form>
+            <br> <img src="images/L7/lab7_task8.png">`;
+            setTimeout(loginFormCheck, 0); 
+            break;
+        case 'btn7':
+            content = `<p>Завдання №9: </p>
+                <div id="colorBox" style="width: 100px; height: 100px; background-color: grey;"></div>
+                <button onclick="changeColor()">Change Color</button>
+                <br> <img src="images/L7/lab7_task9.png">`;
+            break;
+        case 'btn8':
+            content = `<p>Завдання №10: </p>
+                <a href="lab7_task10.html">Task 10</a>
+                <br> <img src="images/L7/lab7_task10.png">`;
+            break;
+        case 'btn9':
+            content = `<p> Висновки: <br> У цій лабораторній роботі були набуті практичні навички роботи з об'єктами, методами об'єкта, Callback, стрілочними функціями, стрілочними функціями як колбеками. А також з реалізації програм засовами мови JAVASCRIPT </p>`;
+            break;
+        default:
+            content = '<p>Виберіть тему для відображення інформації.</p>';
+    }
+
+    return content;
+}
+
+
+// lab7
+
+//task2
+function swapValues() {
+    const input1 = document.getElementById('input1');
+    const input2 = document.getElementById('input2');
+
+    [input1.value, input2.value] = [input2.value, input1.value];
+}
+
+
+//task4
+function increaseSize() {
+    const box = document.getElementById('resizableBox');
+    const currentWidth = parseInt(box.style.width);
+    box.style.width = (currentWidth + 15) + 'px';
+    box.style.height = (currentWidth + 15) + 'px';
+}
+
+function decreaseSize() {
+    const box = document.getElementById('resizableBox');
+    const currentWidth = parseInt(box.style.width);
+    if (currentWidth > 15) {
+        box.style.width = (currentWidth - 15) + 'px';
+        box.style.height = (currentWidth - 15) + 'px';
+    }
+}
+
+//task6
+function doubleValues() {
+    const list = document.getElementById('numbersList');
+    const items = list.querySelectorAll('li');
+    items.forEach(item => {
+        item.textContent = parseInt(item.textContent) * 2;
+    });
+}
+
+//task7
+function showInformation() {
+    let categories = document.querySelectorAll('#categories .item');
+    console.log(`Number of categories: ${categories.length}`);
+
+    let categoriesContent = [...categories];
+    categoriesContent.forEach((category) =>{
+        console.log(`Category: ${category.querySelector('h2').innerText}`);
+        console.log(`Elements: ${category.querySelectorAll('li').length}`);
+    });
+}
+
+//task8
+function loginFormCheck() {
+    const loginForm = document.querySelector('.login-form'); 
+
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+
+        const email = loginForm.elements['email'].value.trim();
+        const password = loginForm.elements['password'].value.trim();
+
+        if (email === '' || password === '') {
+            alert('All form fields must be filled in'); 
+            return; 
+        }
+
+        const formData = {
+            email: email,
+            password: password,
+        };
+
+        console.log(formData);
+
+        loginForm.reset();
+    });
+}
+
+//task9
+function changeColor() {
+    const box = document.getElementById('colorBox');
+    box.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+}
+
+//task10
+
+
 
